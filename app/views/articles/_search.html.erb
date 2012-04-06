@@ -1,0 +1,11 @@
+<script src="/assets/livevalidation_standalone.js"></script>
+<%= form_tag search_articles_path, :method => :get do %>
+<p>
+Search
+<%= text_field_tag :keyword, params[:keyword] %>
+</p>
+<% end %>
+<script>
+var f1 = new LiveValidation('keyword');
+f1.add( Validate.Presence );
+</script>
